@@ -1,0 +1,31 @@
+table_name,column_name,data_type,is_nullable
+dim_customers,customer_id,bigint,NO
+dim_customers,customer_name,text,YES
+dim_customers,city,text,YES
+dim_customers,currency,text,YES
+dim_products,product_name,text,YES
+dim_products,product_id,bigint,NO
+dim_products,category,text,YES
+dim_products,price_INR,bigint,YES
+dim_products,price_USD,double precision,YES
+dim_targets_orders,customer_id,bigint,NO
+dim_targets_orders,ontime_target%,bigint,YES
+dim_targets_orders,infull_target%,bigint,YES
+dim_targets_orders,otif_target%,bigint,YES
+fact_aggregate,order_id,text,NO
+fact_aggregate,customer_id,bigint,NO
+fact_aggregate,order_placement_date,text,NO
+fact_aggregate,on_time,bigint,NO
+fact_aggregate,in_full,bigint,NO
+fact_aggregate,otif,bigint,NO
+fact_order_line,order_id,text,NO
+fact_order_line,order_placement_date,text,NO
+fact_order_line,customer_id,bigint,NO
+fact_order_line,product_id,bigint,NO
+fact_order_line,order_qty,bigint,YES
+fact_order_line,agreed_delivery_date,text,YES
+fact_order_line,actual_delivery_date,text,YES
+fact_order_line,delivery_qty,bigint,YES
+fact_order_line,In Full,bigint,YES
+fact_order_line,On Time,bigint,YES
+fact_order_line,On Time In Full,bigint,YES
